@@ -13,7 +13,7 @@ import lombok.Data;
 @ApplicationScope
 @Data
 @Entity
-@Table(name = "image_title")
+@Table(name = "image_titles")
 public class ImageTitle {
     @Id
     private Long id;

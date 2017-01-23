@@ -1,15 +1,9 @@
-package com.realestate.models;
+package com.realestate.dto;
 
 import java.io.Serializable;
 import java.util.HashMap;
 
 import javax.annotation.ManagedBean;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 import org.springframework.web.context.annotation.ApplicationScope;
 
@@ -21,19 +15,15 @@ import lombok.Data;
 @ManagedBean
 @ApplicationScope
 @Data
-@Entity
-@Table(name = "listings")
-public class Listing implements Serializable {
+public class ListingRequest implements Serializable {
     
     private static final long serialVersionUID = 7621148231343401479L;
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private String title;
     private String description;
     private Float price;
-    private Integer areaId;
+    private Integer area_id;
     private ListingType type;
     private PurchaseType purchaseType;
-    private HashMap<String, AttributeValues> attributes;
+    private HashMap<String, String> attributes;
 }
