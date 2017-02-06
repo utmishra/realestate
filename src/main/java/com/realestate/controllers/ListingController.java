@@ -21,9 +21,8 @@ public class ListingController {
     ListingService listingService;   
 
     @RequestMapping(method = RequestMethod.GET, value =  "/{id}", produces = "application/json")
-    public @ResponseBody ListingRequest get(@PathVariable("id") long id) throws Exception {
-        Long listingId = id;
-        ListingRequest listing = listingService.findListing(listingId.toString());
+    public @ResponseBody ListingRequest get(@PathVariable("id") Long id) throws Exception {
+        ListingRequest listing = listingService.findListing(id);
         return listing;
     }
     

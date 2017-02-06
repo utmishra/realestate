@@ -69,7 +69,7 @@ public class ListingServiceImpl implements ListingService {
     }
 
     @Override
-    public ListingRequest findListing(String listingId) {
+    public ListingRequest findListing(Long listingId) {
         Listing listing = listingRepository.findById(listingId);
         ListingRequest listingRequest = new ListingRequest();
         listingRequest.setArea_id(listing.getAreaId());
