@@ -8,12 +8,14 @@ target/
 .project
 .settings
 .springBeans
+.gitignore
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+*.log
 
 ### NetBeans ###
 nbproject/private/
@@ -22,3 +24,8 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+catalina.base_IS_UNDEFINED/
+logs/
+.mvn/
+mvnw
+mvnw.cmd
